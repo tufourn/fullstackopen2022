@@ -1,0 +1,16 @@
+title part 0.4
+
+browser -> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server --> browser: HTML Code 302 Found
+
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server --> browser: HTML Code 200 OK
+
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server --> browser: main.css
+
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server --> browser: main.js
+
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server --> browser: [{"content":"._.","date":"2022-03-29T21:06:02.058Z"},...]

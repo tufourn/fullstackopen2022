@@ -1,0 +1,16 @@
+title part 0.6
+
+browser -> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over browser:
+content-type application/json; charset=utf-8
+date Mon, 04 Apr 2022 03:58:36 GMT
+end note
+
+server --> browser: HTTP CODE 201 Created
+
+note over browser:
+event handler creates 
+new note and rerenders page
+end note
+
