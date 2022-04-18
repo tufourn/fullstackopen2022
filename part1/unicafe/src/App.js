@@ -6,9 +6,9 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
-const StatisticLine = ({ text, value }) => (
-  <p>{text} {value}</p>
-)
+// const StatisticLine = ({ text, value }) => (
+//   <p>{text} {value}</p>
+// )
 
 const Statistics = (props) => {
   const all = props.good + props.neutral + props.bad
@@ -25,30 +25,32 @@ const Statistics = (props) => {
     <div>
       <h1>statistics</h1>
       <table>
-        <tr>
-          <td> good </td>
-          <td> {props.good} </td>
-        </tr>
-        <tr>
-          <td> neutral </td>
-          <td> {props.neutral} </td>
-        </tr>
-        <tr>
-          <td> bad </td>
-          <td> {props.bad} </td>
-        </tr>
-        <tr>
-          <td> all </td>
-          <td> {all} </td>
-        </tr>
-        <tr>
-          <td> average </td>
-          <td> {Math.round((props.good - props.bad) / all * 10) / 10} </td>
-        </tr>
-        <tr>
-          <td> positive </td>
-          <td> {Math.round((props.good / all * 10)) /10} % </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td> good </td>
+            <td> {props.good} </td>
+          </tr>
+          <tr>
+            <td> neutral </td>
+            <td> {props.neutral} </td>
+          </tr>
+          <tr>
+            <td> bad </td>
+            <td> {props.bad} </td>
+          </tr>
+          <tr>
+            <td> all </td>
+            <td> {all} </td>
+          </tr>
+          <tr>
+            <td> average </td>
+            <td> {Math.round((props.good - props.bad) / all * 10) / 10} </td>
+          </tr>
+          <tr>
+            <td> positive </td>
+            <td> {Math.round((props.good / all * 10)) / 10} % </td>
+          </tr>
+        </tbody>
       </table>
 
       {/* <StatisticLine text="good" value={props.good} />
